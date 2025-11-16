@@ -1,0 +1,27 @@
+model: gpt-4o-mini
+temperature: 0.2
+max_tokens: 400
+seed: 42
+
+max_updates_per_tick: 5
+max_updates_per_collapse: 1
+
+context:
+  recent_log_k: 10
+  near_npc_k: 3
+  latent_cue_k: 6
+
+retry_on_schema_fail: 1
+cache: true
+
+init:
+  world_type: campus
+  spaces: [library, lab, dorm, canteen, gym, yard]
+  start: dorm
+  npcs: {student: 5, mentor: 2, staff: 1}
+  importance_rules:
+    space_default: 2
+    npc_default: 2
+    role_bonus: { mentor: 1 }
+  limits:
+    max_importance3_ratio: 0.2

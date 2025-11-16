@@ -1,0 +1,14 @@
+你是世界建模器。根据以下配置 JSON 生成一个校园世界的三份结构化数据：
+- world.json：对象（key=space_id, value= {id, position, status, importance, visible_state, latent_state[]}）
+- entities.json：对象（key=npc_id, value= {id, role, location, description, importance, memory[], latent_state[]}）
+- events.json：数组（元素 = {id, scope_spaces[], trigger_probability, possible_outcomes[], latency}）
+
+约束：
+- importance ∈ {1,2,3}，3级占比 ≤ 20%
+- visible_state 为 12~24 字的中性描述
+- JSON 字段必须完整，不得出现多余字段
+- 只输出如下 JSON（无需解释）：
+{"world":{...}, "entities":{...}, "events":[...]}
+
+配置：
+{{CONFIG}}
