@@ -1,6 +1,0 @@
-pydantic>=2.7
-pyyaml>=6.0
-tqdm>=4.66
-openai>=1.51
-tenacity>=8.5
-diskcache>=5.6
